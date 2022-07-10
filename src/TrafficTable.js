@@ -10,10 +10,10 @@ class TrafficTable extends React.Component {
         this.state = {
             trafficData: []
         };
-
+    }
+    componentDidMount() {
         axios.get(`${API_URL}/api`)
         .then(res => {
-            this.state.trafficData = res.data;
             this.setState({ trafficData: res.data })
         });
     }
