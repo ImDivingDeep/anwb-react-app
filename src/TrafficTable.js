@@ -12,6 +12,7 @@ class TrafficTable extends React.Component {
         };
     }
     componentDidMount() {
+        // Get the current traffic data from the api
         axios.get(`${API_URL}/api`)
         .then(res => {
             this.setState({ trafficData: res.data })
